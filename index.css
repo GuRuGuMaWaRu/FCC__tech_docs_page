@@ -1,6 +1,40 @@
-body {
-  background-color: rgb(226, 226, 226);
+:root {
+  --main-font-color: #000;
+
+  --code-bg-color: #282c34;
+  --code-main-color: #f4f4f5;
+  --code-const-color: #c5a5c5;
+  --code-method-color: #5b84ad;
+
+  --font-main: "Yantramanav", sans-serif;
 }
-#main-doc {
-  color: palevioletred;
+
+body {
+  color: var(--main-font-color);
+  background-color: rgb(226, 226, 226);
+  font-family: var(--font-main);
+}
+
+/*============================
+DOC ARTICLE
+=============================*/
+
+header {
+  font-size: 1.2rem;
+}
+
+code {
+  color: var(--code-main-color);
+  background-color: var(--code-bg-color);
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.code__const {
+  color: var(--code-const-color);
+}
+
+.code__method {
+  color: var(--code-method-color);
 }
