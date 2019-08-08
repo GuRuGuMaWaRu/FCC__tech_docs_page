@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Technical Documentation Page</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Yantramanav&display=swap"
+      href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Yantramanav&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
@@ -20,6 +20,34 @@
           <span class="code__method">useState</span>(initialState);
         </code>
         <p>Returns a stateful value, and a function to update it.</p>
+        <p>
+          During the initial render, the returned state (<span
+            class="code_in_text"
+            >state</span
+          >) is the same as the value passed as the first argument (<span
+            class="code_in_text"
+            >initialState</span
+          >).
+        </p>
+        <p>
+          The <span class="code_in_text">setState</span> function is used to
+          update the state. It accepts a new state value and enqueues a
+          re-render of the component.
+        </p>
+        <code> <span class="code__method">setState</span>(newState);</code>
+        <p>
+          During subsequent re-renders, the first value returned by
+          <span class="code_in_text">useState</span> will always be the most
+          recent state after applying updates.
+        </p>
+        <div class="note">
+          <h3>Note</h3>
+          React guarantees that
+          <span class="code_in_text">setState</span> function identity is stable
+          and won’t change on re-renders. This is why it’s safe to omit from the
+          <span class="code_in_text">useEffect</span> or
+          <span class="code_in_text">useCallback</span> dependency list.
+        </div>
       </section>
       <section class="main-section" id="useEffect">
         <header>useEffect</header>

@@ -1,18 +1,25 @@
 :root {
-  --main-text-color: #000;
+  --primary-text: #212121;
+  --secondary-text: #757575;
 
   --code-bg-color: #282c34;
   --code-main-color: #f4f4f5;
   --code-const-color: #c5a5c5;
   --code-method-color: #5b84ad;
+  --code-in-text-color: #eee2ae;
+
+  --note-bg-color: #fff7d0;
+  --note-border-color: #ffe564;
 
   --font-main: "Yantramanav", sans-serif;
+  --font-header: "Ubuntu Mono", monospace;
 }
 
 body {
-  color: var(--main-text-color);
+  color: var(--secondary-text);
   background-color: rgb(226, 226, 226);
   font-family: var(--font-main);
+  font-size: 0.7rem;
 }
 
 /*============================
@@ -20,7 +27,12 @@ DOC ARTICLE
 =============================*/
 
 header {
-  font-size: 1.3rem;
+  color: var(--primary-text);
+  font-family: var(--font-header);
+  font-size: 1.1rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 code {
@@ -38,4 +50,29 @@ code {
 
 .code__method {
   color: var(--code-method-color);
+}
+
+.code_in_text {
+  background-color: var(--code-in-text-color);
+  padding: 0 3px;
+}
+
+p {
+  line-height: 1.7;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.note {
+  background-color: var(--note-bg-color);
+  line-height: 1.7;
+  padding: 20px 45px 20px 26px;
+  border-left: 9px solid var(--note-border-color);
+}
+
+.note h3 {
+  color: var(--primary-text);
+
+  margin: 0;
 }
