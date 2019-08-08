@@ -1,5 +1,5 @@
 :root {
-  --main-font-color: #000;
+  --main-text-color: #000;
 
   --code-bg-color: #282c34;
   --code-main-color: #f4f4f5;
@@ -10,7 +10,7 @@
 }
 
 body {
-  color: var(--main-font-color);
+  color: var(--main-text-color);
   background-color: rgb(226, 226, 226);
   font-family: var(--font-main);
 }
@@ -20,12 +20,13 @@ DOC ARTICLE
 =============================*/
 
 header {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 code {
   color: var(--code-main-color);
   background-color: var(--code-bg-color);
+  display: block;
   padding: 16px;
   margin: 10px 0;
   border-radius: 5px;
