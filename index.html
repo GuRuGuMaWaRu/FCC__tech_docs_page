@@ -51,30 +51,102 @@
       </section>
       <section class="main-section" id="useEffect">
         <header>useEffect</header>
+        <code><span class="code__method">useEffect</span>(didUpdate);</code>
+        <p>
+          Accepts a function that contains imperative, possibly effectful code.
+        </p>
+        <p>
+          Mutations, subscriptions, timers, logging, and other side effects are
+          not allowed inside the main body of a function component (referred to
+          as React’s render phase). Doing so will lead to confusing bugs and
+          inconsistencies in the UI.
+        </p>
+        <p>
+          Instead, use <span class="code_in_text">useEffect</span>. The function
+          passed to <span class="code_in_text">useEffect</span> will run after
+          the render is committed to the screen. Think of effects as an escape
+          hatch from React’s purely functional world into the imperative world.
+        </p>
+        <p>
+          By default, effects run after every completed render, but you can
+          choose to fire it only when certain values have changed.
+        </p>
       </section>
       <section class="main-section" id="useContext">
         <header>useContext</header>
+        <code>
+          <span class="code__const">const</span> value =
+          <span class="code__method">useContext</span>(MyContext);
+        </code>
+        <p>
+          Accepts a context object (the value returned from
+          <span class="code_in_text">React.createContext</span>) and returns the
+          current context value for that context. The current context value is
+          determined by the <span class="code_in_text">value</span> prop of the
+          nearest
+          <span class="code_in_text">&lt;MyContext.Provider&gt;</span> above the
+          calling component in the tree.
+        </p>
+        <p>
+          When the nearest
+          <span class="code_in_text">&lt;MyContext.Provider&gt;</span> above the
+          component updates, this Hook will trigger a rerender with the latest
+          context <span class="code_in_text">value</span> passed to that
+          MyContext provider.
+        </p>
       </section>
       <section class="main-section" id="useReducer">
         <header>useReducer</header>
+        <code>
+          <span class="code__const">const</span> [state, dispatch] =
+          <span class="code__method">useReducer</span>(reducer, initialArg,
+          init);
+        </code>
+        <p>
+          An alternative to useState. Accepts a reducer of type
+          <span class="code_in_text">(state, action) => newState</span>, and
+          returns the current state paired with a
+          <span class="code_in_text">dispatch</span>
+          method. (If you’re familiar with Redux, you already know how this
+          works.)
+        </p>
+        <p>
+          <span class="code_in_text">useReducer</span> is usually preferable to
+          <span class="code_in_text">useState</span> when you have complex state
+          logic that involves multiple sub-values or when the next state depends
+          on the previous one. <span class="code_in_text">useReducer</span> also
+          lets you optimize performance for components that trigger deep updates
+          because you can pass dispatch down instead of callbacks.
+        </p>
       </section>
       <section class="main-section" id="useCallback">
-        <header>useCallback</header>
-      </section>
-      <section class="main-section" id="useMemo">
         <header>useMemo</header>
-      </section>
-      <section class="main-section" id="useRef">
-        <header>useRef</header>
-      </section>
-      <section class="main-section" id="useImperativeHandle">
-        <header>useImperativeHandle</header>
-      </section>
-      <section class="main-section" id="useLayoutEffect">
-        <header>useLayoutEffect</header>
-      </section>
-      <section class="main-section" id="useDebugValue">
-        <header>useDebugValue</header>
+        <code>
+          <span class="code__const">const</span> memoizedValue =
+          <span class="code__method">useMemo</span>(() =>
+          <span class="code__method">computeExpensiveValue</span>(a, b), [a,
+          b]);
+        </code>
+        <p>
+          Returns a memoized value.
+        </p>
+        <p>
+          Pass a “create” function and an array of dependencies.
+          <span class="code_in_text">useMemo</span> will only recompute the
+          memoized value when one of the dependencies has changed. This
+          optimization helps to avoid expensive calculations on every render.
+        </p>
+        <p>
+          Remember that the function passed to
+          <span class="code_in_text">useMemo</span> runs during rendering. Don’t
+          do anything there that you wouldn’t normally do while rendering. For
+          example, side effects belong in
+          <span class="code_in_text">useEffect</span>, not
+          <span class="code_in_text">useMemo</span>.
+        </p>
+        <p>
+          If no array is provided, a new value will be computed on every render.
+        </p>
       </section>
     </main>
   </body>

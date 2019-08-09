@@ -6,6 +6,7 @@
   --code-main-color: #f4f4f5;
   --code-const-color: #c5a5c5;
   --code-method-color: #5b84ad;
+  --code-comment-color: #808184;
   --code-in-text-color: #eee2ae;
 
   --note-bg-color: #fff7d0;
@@ -29,8 +30,9 @@ DOC ARTICLE
 header {
   color: var(--primary-text);
   font-family: var(--font-header);
-  font-size: 1.1rem;
+  font-size: 1rem;
   width: 90%;
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -40,7 +42,7 @@ code {
   background-color: var(--code-bg-color);
   display: block;
   padding: 16px;
-  margin: 10px 0;
+  margin: 10px 19px;
   border-radius: 5px;
 }
 
@@ -50,6 +52,10 @@ code {
 
 .code__method {
   color: var(--code-method-color);
+}
+
+.code__comment {
+  color: var(--code-comment-color);
 }
 
 .code_in_text {
@@ -73,6 +79,12 @@ p {
 
 .note h3 {
   color: var(--primary-text);
-
   margin: 0;
+}
+
+.subheading {
+  width: 90%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
