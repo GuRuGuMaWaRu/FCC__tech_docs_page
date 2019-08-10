@@ -13,6 +13,17 @@
   </head>
   <body>
     <main id="main-doc">
+      <!--SECTION 0 - Hooks API Reference-->
+      <section class="main-section" id="hooksApiReference">
+        <header>Hooks API Reference</header>
+        <ul>
+          <li>useState</li>
+          <li>useEffect</li>
+          <li>useContext</li>
+          <li>useReducer</li>
+          <li>useCallback</li>
+        </ul>
+      </section>
       <!--SECTION 1 - useState-->
       <section class="main-section" id="useState">
         <header>useState</header>
@@ -96,6 +107,25 @@
           component updates, this Hook will trigger a rerender with the latest
           context <span class="code_in_text">value</span> passed to that
           MyContext provider.
+        </p>
+        <ul>
+          <li>
+            <b>Correct:</b>
+            <span class="code_in_text">useContext(MyContext)</span>
+          </li>
+          <li>
+            <b>Incorrect:</b>
+            <span class="code_in_text">useContext(MyContext.Consumer)</span>
+          </li>
+          <li>
+            <b>Incorrect:</b>
+            <span class="code_in_text">useContext(MyContext.Provider)</span>
+          </li>
+        </ul>
+        <p>
+          A component calling <span class="code_in_text">useContext</span> will
+          always re-render when the context value changes. If re-rendering the
+          component is expensive, you can optimize it by using memoization.
         </p>
       </section>
       <!--SECTION 4 - useReducer-->
