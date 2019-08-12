@@ -11,7 +11,7 @@ Objective: Build a CodePen.io app that is functionally similar to this: https://
 - [+] User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
 - [+] User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
 - [+] User Story #7: The .main-section elements should contain at least 5 li items total (not each).
-- [ ] User Story #8: I can see a nav element with a corresponding id="navbar".
+- [+] User Story #8: I can see a nav element with a corresponding id="navbar".
 - [ ] User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
 - [ ] User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
 - [ ] User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.

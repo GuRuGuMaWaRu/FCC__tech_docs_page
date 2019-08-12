@@ -13,7 +13,7 @@
   </head>
   <body>
     <nav id="navbar">
-      <h1>Navigation</h1>
+      <header class="navbar-header">REACT HOOKS</header>
       <ul>
         <li>useState</li>
         <li>useEffect</li>
@@ -25,7 +25,7 @@
     <main id="main-doc">
       <!--SECTION 0 - Hooks API Reference-->
       <section class="main-section" id="hooksApiReference">
-        <header>Hooks API Reference</header>
+        <header class="section-header">Hooks API Reference</header>
         <ul>
           <li>useState</li>
           <li>useEffect</li>
@@ -36,7 +36,7 @@
       </section>
       <!--SECTION 1 - useState-->
       <section class="main-section" id="useState">
-        <header>useState</header>
+        <header class="section-header">useState</header>
         <code
           ><span class="code__const">const</span> [state, setState] =
           <span class="code__method">useState</span>(initialState);
@@ -73,7 +73,7 @@
       </section>
       <!--SECTION 2 - useEffect-->
       <section class="main-section" id="useEffect">
-        <header>useEffect</header>
+        <header class="section-header">useEffect</header>
         <code><span class="code__method">useEffect</span>(didUpdate);</code>
         <p>
           Accepts a function that contains imperative, possibly effectful code.
@@ -97,7 +97,7 @@
       </section>
       <!--SECTION 3 - useContext-->
       <section class="main-section" id="useContext">
-        <header>useContext</header>
+        <header class="section-header">useContext</header>
         <code>
           <span class="code__const">const</span> value =
           <span class="code__method">useContext</span>(MyContext);
@@ -140,7 +140,7 @@
       </section>
       <!--SECTION 4 - useReducer-->
       <section class="main-section" id="useReducer">
-        <header>useReducer</header>
+        <header class="section-header">useReducer</header>
         <code>
           <span class="code__const">const</span> [state, dispatch] =
           <span class="code__method">useReducer</span>(reducer, initialArg,
@@ -165,7 +165,7 @@
       </section>
       <!--SECTION 5 - useCallback-->
       <section class="main-section" id="useCallback">
-        <header>useMemo</header>
+        <header class="section-header">useMemo</header>
         <code>
           <span class="code__const">const</span> memoizedValue =
           <span class="code__method">useMemo</span>(() =>
