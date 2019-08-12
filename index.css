@@ -33,6 +33,13 @@ body {
   margin-right: 5%;
 }
 
+@media (max-width: 500px) {
+  #main-doc {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
 /*============================
 DOC ARTICLE
 =============================*/
@@ -110,6 +117,9 @@ ul li {
   margin-right: auto;
 }
 
+@media (max-width: 500px) {
+}
+
 /*============================
 NAVBAR
 =============================*/
@@ -128,14 +138,14 @@ NAVBAR
   margin-top: 3rem;
 }
 
-.nav-menu {
+.nav-menu,
+.nav-menu-drawer {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
 
 .nav-item {
-  /* padding: 0.4rem 0; */
   margin: 0;
   cursor: pointer;
 }
@@ -144,14 +154,71 @@ NAVBAR
   background-color: palevioletred;
 }
 
-.nav-item:hover .nav-link {
+.nav-item:hover .nav-link,
+.nav-item:hover .nav-link-drawer {
   color: #fff;
 }
 
-.nav-link {
+.nav-link,
+.nav-link-drawer {
   color: var(--primary-text);
   display: inline-block;
   text-decoration: none;
   width: 100%;
   padding: 0.4rem 0;
+}
+
+#nav-menu-icon {
+  display: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#nav-drawer {
+  display: none;
+  background-color: var(--navbar-bg-color);
+  position: fixed;
+  width: 100px;
+  top: 32px;
+  right: -200px;
+  transition: right 0.2s ease-in-out;
+}
+
+#nav-drawer.open {
+  right: 0;
+}
+
+.nav-menu-drawer {
+  width: 100%;
+  margin: 0;
+}
+
+.nav-link-drawer {
+  padding-left: 10px;
+}
+
+@media (max-width: 500px) {
+  #navbar {
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+    padding-left: 0;
+  }
+  .navbar-header {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .nav-menu {
+    display: none;
+  }
+  #nav-menu-icon {
+    display: inline-block;
+  }
+  #nav-drawer {
+    display: block;
+  }
 }

@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Yantramanav&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/bd3d3ff9b7.js"></script>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -32,8 +33,31 @@
           <a class="nav-link" href="#useCallback">useCallback</a>
         </li>
       </ul>
+      <i class="fas fa-bars" id="nav-menu-icon"></i>
     </nav>
     <!-- NAVBAR -- end -->
+    <!-- NAV-DRAWER -- begin -->
+    <div id="nav-drawer">
+      <ul class="nav-menu-drawer">
+        <li class="nav-item">
+          <a class="nav-link-drawer" href="#useState">useState</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link-drawer" href="#useEffect">useEffect</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link-drawer" href="#useContext">useContext</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link-drawer" href="#useReducer">useReducer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link-drawer" href="#useCallback">useCallback</a>
+        </li>
+      </ul>
+    </div>
+    <!-- NAV-DRAWER -- end -->
+
     <main id="main-doc">
       <!--SECTION 0 - Hooks API Reference-->
       <section class="main-section" id="hooksApiReference">
@@ -207,4 +231,5 @@
       </section>
     </main>
   </body>
+  <script src="index.js"></script>
 </html>
