@@ -30,7 +30,7 @@
           <a class="nav-link" href="#useReducer">useReducer</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#useCallback">useCallback</a>
+          <a class="nav-link" href="#useMemo">useMemo</a>
         </li>
       </ul>
       <i class="fas fa-bars" id="nav-menu-icon"></i>
@@ -52,24 +52,13 @@
           <a class="nav-link-drawer" href="#useReducer">useReducer</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link-drawer" href="#useCallback">useCallback</a>
+          <a class="nav-link-drawer" href="#useMemo">useMemo</a>
         </li>
       </ul>
     </div>
     <!-- NAV-DRAWER -- end -->
 
     <main id="main-doc">
-      <!--SECTION 0 - Hooks API Reference-->
-      <section class="main-section" id="hooksApiReference">
-        <header class="section-header">Hooks API Reference (shortened)</header>
-        <ul>
-          <li>useState</li>
-          <li>useEffect</li>
-          <li>useContext</li>
-          <li>useReducer</li>
-          <li>useCallback</li>
-        </ul>
-      </section>
       <!--SECTION 1 - useState-->
       <section class="main-section" id="useState">
         <header class="section-header">useState</header>
@@ -78,6 +67,10 @@
           <span class="code__method">useState</span>(initialState);
         </code>
         <p>Returns a stateful value, and a function to update it.</p>
+        <ul>
+          <li>Good for maninpulating state.</li>
+          <li>Is used in functional components.</li>
+        </ul>
         <p>
           During the initial render, the returned state (<span
             class="code_in_text"
@@ -200,7 +193,7 @@
         </p>
       </section>
       <!--SECTION 5 - useCallback-->
-      <section class="main-section" id="useCallback">
+      <section class="main-section" id="useMemo">
         <header class="section-header">useMemo</header>
         <code>
           <span class="code__const">const</span> memoizedValue =
