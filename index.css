@@ -23,7 +23,7 @@ body {
   color: var(--secondary-text);
   background-color: var(--main-bg-color);
   font-family: var(--font-main);
-  font-size: 0.7rem;
+  font-size: 1.25rem;
   margin: 0;
 }
 
@@ -33,7 +33,10 @@ body {
   margin-right: 5%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  body {
+    font-size: 0.7rem;
+  }
   #main-doc {
     width: 95%;
     margin: 0 auto;
@@ -117,9 +120,6 @@ ul li {
   margin-right: auto;
 }
 
-@media (max-width: 500px) {
-}
-
 /*============================
 NAVBAR
 =============================*/
@@ -197,7 +197,7 @@ NAVBAR
   padding-left: 10px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   #navbar {
     /* background-color: tomato; */
     display: flex;
